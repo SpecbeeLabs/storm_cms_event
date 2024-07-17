@@ -1,0 +1,16 @@
+{
+    "name": "specbee/storm_cms_event",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Malabya",
+            "email": "malabya@specbee.com"
+        }
+    ],
+    "require": {
+        "drupal/geolocation": "^3.13",
+        "drupal/smart_date": "^4.1",
+        "specbee/storm_cms_content_type_base": "*"
+    }
+}
