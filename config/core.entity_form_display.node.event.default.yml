@@ -16,7 +16,6 @@ dependencies:
   module:
     - address
     - content_moderation
-    - custom_field
     - field_group
     - link
     - media_library
@@ -133,13 +132,14 @@ content:
       separator: to
     third_party_settings: {  }
   field_featured_speakers:
-    type: custom_stacked
-    weight: 5
+    type: entity_reference_autocomplete
+    weight: 26
     region: content
     settings:
-      label: true
-      wrapper: details
-      open: false
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: media_library_widget

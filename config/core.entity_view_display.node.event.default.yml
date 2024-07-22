@@ -14,7 +14,6 @@ dependencies:
     - node.type.event
   module:
     - address
-    - custom_field
     - layout_builder
     - layout_discovery
     - link
@@ -749,8 +748,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          61118cea-2d9c-42ce-890e-c49725d1bd41:
-            uuid: 61118cea-2d9c-42ce-890e-c49725d1bd41
+          0f054074-e4f5-4860-99fc-b4cfc57b6761:
+            uuid: 0f054074-e4f5-4860-99fc-b4cfc57b6761
             region: second
             configuration:
               id: 'field_block:node:event:field_featured_speakers'
@@ -761,28 +760,10 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: custom_formatter
+                type: entity_reference_entity_view
                 label: above
                 settings:
-                  fields:
-                    picture:
-                      format_type: image
-                      formatter_settings:
-                        image_link: ''
-                        image_style: medium
-                        image_loading:
-                          attribute: lazy
-                        label_display: hidden
-                    name:
-                      format_type: string
-                      formatter_settings:
-                        key_label: label
-                        label_display: hidden
-                        prefix_suffix: false
-                    bio:
-                      format_type: text_default
-                      formatter_settings:
-                        label_display: hidden
+                  view_mode: teaser
                 third_party_settings: {  }
             weight: 0
             additional: {  }
@@ -825,14 +806,6 @@ content:
         suffix: h
     third_party_settings: {  }
     weight: 108
-    region: content
-  field_featured_speakers:
-    type: custom_formatter
-    label: above
-    settings:
-      fields: {  }
-    third_party_settings: {  }
-    weight: 109
     region: content
   field_image:
     type: entity_reference_entity_view
@@ -890,4 +863,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_featured_speakers: true

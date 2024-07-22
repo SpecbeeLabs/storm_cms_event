@@ -3,10 +3,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_featured_speakers
-    - image.style.thumbnail
     - node.type.event
-  module:
-    - custom_field
+    - node.type.person
 id: node.event.field_featured_speakers
 field_name: field_featured_speakers
 entity_type: node
@@ -18,61 +16,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  field_settings:
-    picture:
-      type: image_image
-      weight: -10
-      check_empty: false
-      widget_settings:
-        label: Picture
-        settings:
-          alt_field: true
-          alt_field_required: true
-          title_field: true
-          title_field_required: false
-          preview_image_style: thumbnail
-          description: ''
-          description_display: after
-          max_resolution: ''
-          min_resolution: ''
-          required: false
-          file_directory: '[date:custom:Y]-[date:custom:m]'
-          file_extensions: 'png jpg jpeg'
-          max_filesize: ''
-          progress_indicator: bar
-    name:
-      type: text
-      weight: -9
-      check_empty: false
-      widget_settings:
-        label: Name
-        settings:
-          description: ''
-          description_display: after
-          size: 60
-          placeholder: ''
-          maxlength: 255
-          maxlength_js: false
-          prefix: ''
-          suffix: ''
-          required: false
-    bio:
-      type: textarea
-      weight: -8
-      check_empty: false
-      widget_settings:
-        label: Bio
-        settings:
-          description: ''
-          description_display: after
-          placeholder: ''
-          maxlength: 255
-          maxlength_js: false
-          required: false
-          rows: 3
-          formatted: false
-          default_format: plain_text
-          format:
-            guidelines: true
-            help: true
-field_type: custom
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
