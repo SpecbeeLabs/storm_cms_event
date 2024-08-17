@@ -1,6 +1,7 @@
 name: Storm CMS Event
 description: Storm CMS Event
 recipes:
+  - core/recipes/editorial_workflow
   - storm_cms_content_type_base
 install:
   - datetime_range
