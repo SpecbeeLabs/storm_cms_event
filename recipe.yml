@@ -1,5 +1,9 @@
 name: Storm CMS Event
 description: Storm CMS Event
+recipes:
+  - storm_cms_content_type_base
+  - storm_cms_media
+  - storm_cms_person
 install:
   - datetime_range
   - geolocation_address
