@@ -12,6 +12,7 @@
         "drupal/geolocation": "^3.13",
         "drupal/smart_date": "^4.1",
         "specbee/storm_cms_content_type_base": "*",
-        "specbee/storm_cms_person": "*"
+        "specbee/storm_cms_person": "*",
+        "drupal/addtocal_augment": "^1.2@beta"
     }
 }

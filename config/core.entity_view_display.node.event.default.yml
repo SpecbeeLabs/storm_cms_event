@@ -96,7 +96,28 @@ third_party_settings:
                     unit: ''
                     decimals: 2
                     suffix: h
-                third_party_settings: {  }
+                third_party_settings:
+                  date_augmenter:
+                    status:
+                      addtocal: 1
+                    weights:
+                      order:
+                        addtocal:
+                          weight: '0'
+                    augmenter_settings:
+                      settings__formatter__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+                    settings:
+                      addtocal:
+                        label: 'Add to calendar'
+                        event_title: ''
+                        location: '[node:field_location]'
+                        description: '[node:body]'
+                        retain_spacing: 0
+                        icons: 1
+                        max_desc: '60'
+                        ellipsis: 1
+                        target: ''
+                        past_events: 0
             weight: 1
             additional: {  }
           12718ffa-0b20-426e-874e-84ca8afce361:
@@ -768,6 +789,8 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+_core:
+  default_config_hash: x5ylRK_3i2ga1u9qOFdp0xZuQIK8vzAemxG_4vT7vVU
 id: node.event.default
 targetEntityType: node
 bundle: event

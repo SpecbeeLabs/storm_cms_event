@@ -12,39 +12,210 @@ dependencies:
     - field.field.node.event.field_meta_tags
     - field.field.node.event.field_teaser
     - field.field.node.event.field_thumbnail
+    - image.style.large
     - node.type.event
   module:
+    - date_augmenter
+    - layout_builder
+    - lazy
+    - media
+    - smart_date
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          17627b83-4884-4043-8565-25134a8e182b:
+            uuid: 17627b83-4884-4043-8565-25134a8e182b
+            region: first
+            configuration:
+              id: 'field_block:node:event:field_thumbnail'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings:
+                  lazy:
+                    lazy_image: '0'
+                    placeholder_style: ''
+                    data_uri: false
+            weight: 0
+            additional: {  }
+          ebfc99dd-c7ec-4577-975b-e9e488651c9d:
+            uuid: ebfc99dd-c7ec-4577-975b-e9e488651c9d
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_date_time'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: smartdate_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                  format: default
+                  force_chronological: false
+                  add_classes: true
+                  time_wrapper: true
+                  localize: false
+                  parts:
+                    start: start
+                    end: end
+                    duration: duration
+                  duration:
+                    separator: ' | '
+                    unit: ''
+                    decimals: 2
+                    suffix: h
+                third_party_settings:
+                  date_augmenter:
+                    weights:
+                      order:
+                        addtocal:
+                          weight: '0'
+                    settings:
+                      addtocal:
+                        label: 'Add to calendar'
+                        event_title: ''
+                        location: ''
+                        description: ''
+                        icons: '1'
+                        max_desc: '60'
+                        ellipsis: '1'
+                        target: ''
+                        retain_spacing: 0
+                        past_events: 0
+                    status:
+                      addtocal: 0
+                    augmenter_settings:
+                      fields__field_date_time__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+            weight: 0
+            additional: {  }
+          ca315ecb-a1f6-4492-a4bf-8f21c0683d29:
+            uuid: ca315ecb-a1f6-4492-a4bf-8f21c0683d29
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_teaser'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          2d410998-468b-4eb2-9b35-18d4fb6ebc57:
+            uuid: 2d410998-468b-4eb2-9b35-18d4fb6ebc57
+            region: second
+            configuration:
+              id: 'extra_field_block:node:event:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_date_time:
+    type: smartdate_default
     label: hidden
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: true
+      time_wrapper: true
+      localize: false
+      parts:
+        start: start
+        end: end
+        duration: duration
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings:
+      date_augmenter:
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Add to calendar'
+            event_title: ''
+            location: ''
+            description: ''
+            icons: '1'
+            max_desc: '60'
+            ellipsis: '1'
+            target: ''
+            retain_spacing: 0
+            past_events: 0
+        status:
+          addtocal: 0
+        augmenter_settings:
+          fields__field_date_time__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+    weight: 1
     region: content
-  content_moderation_control:
+  field_teaser:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 2
+    region: content
+  field_thumbnail:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      lazy:
+        lazy_image: '0'
+        placeholder_style: ''
+        data_uri: false
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
-  field_date_time: true
+  body: true
+  content_moderation_control: true
   field_featured_speakers: true
   field_image: true
   field_link: true
   field_location: true
   field_meta_tags: true
-  field_teaser: true
-  field_thumbnail: true
