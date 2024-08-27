@@ -10,7 +10,6 @@
     ],
     "require": {
         "drupal/addtocal_augment": "^1.2@beta",
-        "drupal/field_formatter_class": "^1.6",
         "drupal/geolocation": "^3.13",
         "drupal/paragraphs": "^1.18",
         "drupal/simple_gmap": "^3.1",
