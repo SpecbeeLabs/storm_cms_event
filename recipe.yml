@@ -3,11 +3,14 @@ description: Storm CMS Event
 recipes:
   - storm_cms_content_type_base
 install:
+  - addtocal_augment
   - datetime_range
+  - field_formatter_class
   - geolocation_address
   - geolocation_leaflet
+  - paragraphs
   - smart_date
-  - addtocal_augment
+  - simple_gmap
 config:
   import:
     smart_date: '*'

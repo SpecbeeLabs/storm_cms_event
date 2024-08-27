@@ -9,10 +9,23 @@
         }
     ],
     "require": {
+        "drupal/addtocal_augment": "^1.2@beta",
+        "drupal/field_formatter_class": "^1.6",
         "drupal/geolocation": "^3.13",
+        "drupal/paragraphs": "^1.18",
+        "drupal/simple_gmap": "^3.1",
         "drupal/smart_date": "^4.1",
         "specbee/storm_cms_content_type_base": "*",
-        "specbee/storm_cms_person": "*",
-        "drupal/addtocal_augment": "^1.2@beta"
+        "specbee/storm_cms_person": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "patches": {
+            "drupal/simple_gmap": {
+                "Support Address": "https://www.drupal.org/files/issues/2024-03-22/simple_gmap-address-formatter-2863979-62.patch"
+            }
+        }
     }
 }
