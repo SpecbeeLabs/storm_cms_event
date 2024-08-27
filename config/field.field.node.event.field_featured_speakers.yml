@@ -4,7 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_featured_speakers
     - node.type.event
-    - node.type.person
+    - paragraphs.paragraphs_type.speaker
+  module:
+    - entity_reference_revisions
 id: node.event.field_featured_speakers
 field_name: field_featured_speakers
 entity_type: node
@@ -16,13 +18,34 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      person: person
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+      speaker: speaker
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      feature:
+        weight: 11
+        enabled: false
+      logo:
+        weight: 12
+        enabled: false
+      quick_link:
+        weight: 13
+        enabled: false
+      slide:
+        weight: 14
+        enabled: false
+      speaker:
+        weight: 9
+        enabled: true
+      stat:
+        weight: 15
+        enabled: false
+      tab:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_organisation_designation
+    - paragraphs.paragraphs_type.speaker
+id: paragraph.speaker.field_organisation_designation
+field_name: field_organisation_designation
+entity_type: paragraph
+bundle: speaker
+label: 'Organisation & Designation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
