@@ -21,8 +21,8 @@ content:
   field_bio:
     type: text_default
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     weight: 3
     region: content
   field_name:
@@ -32,7 +32,7 @@ content:
       link_to_entity: false
     third_party_settings:
       field_formatter_class:
-        class: field__label
+        class: ""
     weight: 1
     region: content
   field_organisation_designation:
@@ -42,24 +42,24 @@ content:
       link_to_entity: false
     third_party_settings:
       field_formatter_class:
-        class: block__title
+        class: ""
     weight: 2
     region: content
   field_picture:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
+      image_link: ""
       image_style: large
       image_loading:
         attribute: lazy
     third_party_settings:
       field_formatter_class:
-        class: ''
+        class: ""
       lazy:
-        lazy_image: '0'
-        placeholder_style: ''
+        lazy_image: "0"
+        placeholder_style: ""
         data_uri: false
     weight: 0
     region: content
-hidden: {  }
+hidden: {}
