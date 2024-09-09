@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_teaser
     - field.field.node.event.field_thumbnail
     - node.type.event
+    - views.view.events
   module:
     - address
     - entity_reference_revisions
@@ -23,6 +24,7 @@ dependencies:
     - smart_date
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -226,6 +228,26 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Upcoming Events'
+          context_mapping: {  }
+        components:
+          befb81b3-fed7-4352-90a2-c740ffc9632d:
+            uuid: befb81b3-fed7-4352-90a2-c740ffc9632d
+            region: content
+            configuration:
+              id: 'views_block:events-block_3'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
             weight: 0
             additional: {  }
         third_party_settings: {  }
