@@ -175,7 +175,7 @@ third_party_settings:
                         icons: 1
                         max_desc: '0'
                         ellipsis: 0
-                        target: modal
+                        target: ''
                         past_events: 0
                   field_formatter_class:
                     class: ''
