@@ -12,19 +12,12 @@
         "drupal/addtocal_augment": "^1.2@beta",
         "drupal/geolocation": "^3.13",
         "drupal/paragraphs": "^1.18",
-        "drupal/simple_gmap": "^3.1",
+        "drupal/simple_gmap": "^4.0",
         "drupal/smart_date": "^4.1",
         "specbee/storm_cms_content_type_base": "*",
         "specbee/storm_cms_person": "*"
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "patches": {
-            "drupal/simple_gmap": {
-                "[#2863979] Support Address": "https://git.drupalcode.org/project/simple_gmap/-/merge_requests/11.patch"
-            }
-        }
     }
 }
