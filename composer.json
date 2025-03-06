@@ -23,7 +23,7 @@
     "extra": {
         "patches": {
             "drupal/simple_gmap": {
-                "Support Address": "https://www.drupal.org/files/issues/2024-03-22/simple_gmap-address-formatter-2863979-62.patch"
+                "[#2863979] Support Address": "https://git.drupalcode.org/project/simple_gmap/-/merge_requests/11.patch"
             }
         }
     }
